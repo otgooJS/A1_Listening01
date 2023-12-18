@@ -1,7 +1,7 @@
 @media only screen and (orientation: portrait) {
     :root {
         --max-width: 98vw;
-        --max-height: 150vw; 
+        --max-height: 170vw; 
         
     }
 }
@@ -51,7 +51,7 @@
     width: var(--max-width);
     height: var(--max-height);
     background-color: #F3F3F3;
-    border: 1px solid blueviolet; 
+    border: 1px solid red; 
     display: none;
     flex-direction: column;
 }
