@@ -1,7 +1,7 @@
 @media only screen and (orientation: portrait) {
     :root {
         --max-width: 98vw;
-        --max-height: 127vw; 
+        --max-height: 136vw; 
         
     }
 }
@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly ;
-    align-items: end; /* horizontal center */
+    align-items: center; /* horizontal center */
 }
 #container-images {
     width: 65%;
@@ -101,7 +101,7 @@ justify-content: space-evenly;
 .img-word {
     height: 20%;
     width: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     align-self: center;
 }
 #bottom {
