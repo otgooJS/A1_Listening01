@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listening 1.01</title>
+    <link rel="stylesheet" href="./listen01.01.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="container-sessions">
+        <div id="container-speakers">
+          <img
+            onclick="playAudio(this.id)"
+            src="./img/SPEAKER1_Blue.jpg"
+            alt=""
+            class="img-speaker"
+            id="speaker-0"
+          />
+          <audio id="aud-0-word">
+            <source src="./aud_part1/applean.wav" type="audio/mpeg" />
+          </audio>
+          <img
+            onclick="playAudio(this.id)"
+            src="./img/SPEAKER1_Blue.jpg"
+            alt=""
+            class="img-speaker"
+            id="speaker-1"
+          />
+          <img
+            onclick="playAudio(this.id)"
+            src="./img/SPEAKER1_Blue.jpg"
+            alt=""
+            class="img-speaker"
+            id="speaker-2"
+          />
+          <img
+            onclick="playAudio(this.id)"
+            src="./img/SPEAKER1_Blue.jpg"
+            alt=""
+            class="img-speaker"
+            id="speaker-3"
+          />
+        </div>
+        <div id="container-images">
+          <img
+            onclick="imgSrc(this.id)"
+            src=""
+            alt=""
+            class="img-word"
+            id="img-word-0"
+          />
+          <img
+            onclick="imgSrc(this.id)"
+            src=""
+            alt=""
+            class="img-word"
+            id="img-word-1"
+          />
+          <img
+            onclick="imgSrc(this.id)"
+            src=""
+            alt=""
+            class="img-word"
+            id="img-word-2"
+          />
+          <img
+            onclick="imgSrc(this.id)"
+            src=""
+            alt=""
+            class="img-word"
+            id="img-word-3"
+          />
+        </div>
+      </div>
+      <div id="bottom0">
+        <div id="device-selection-container">
+          <!-- <label for="">phone</label> -->
+          <div>
+            <input
+              type="radio"
+              name="device-selection"
+              value="Phone"
+              id="phone"
+              checked
+            />phone
+          </div>
+          <!-- <label for="">ipad/tablet</label> -->
+          <div>
+            <input
+              type="radio"
+              name="device-selection"
+              value="iPad"
+              id="iPad"
+            />iPad/Tab
+          </div>
+        </div>
+        <div id="part-selection-btns">
+          <div id="part-selection">
+            <div id="parts">
+              <input
+                onclick="radioPart1(this.value)"
+                type="radio"
+                name="part"
+                value="Part1"
+                id="part-0"
+                checked
+              />Part 1
+              <input
+                onclick="radioPart2(this.value)"
+                type="radio"
+                name="part"
+                value="Part2"
+                id="part-1"
+              />Part 2
+              <input type="radio" name="part" value="Part3" id="part-2" />Part 3
+            </div>
+          </div>
+          <div id="bottom">
+            <img
+              onclick="prew()"
+              src="./img/PREW1.jpg"
+              alt=""
+              class="prew-next"
+              id="btn-prew"
+            />
+            <div onclick="initiateListening()" id="btn-start">
+              <p>Start</p>
+            </div>
+            <img
+              onclick="next()"
+              src="./img/NEXT1.jpg"
+              alt=""
+              class="prew-next"
+              id="btn-next"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./listen01.01.js"></script>
+  </body>
+</html>
