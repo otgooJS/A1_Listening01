@@ -21,9 +21,11 @@ var path;
 //clickedAud-ийн index 1-д нэмж clickedAud[1] = id.slice(8);--> extract 1 from Speaker-1
 var clickedAud, clickedImg;
 
-//github deerhi zam
-var path0 = "https://github.com/otgooJS/A0_Listening01/blob/main/";
-//"https://github.com/otgooJS/A0_Listening01/blob/main/img_part1/applean.png";
+//Device selection
+//document.getElementById("css-phone").href = `./stylePhone.css`;
+
+var cssDevice;
+
 var imgPart1 = [
   ["applean.png", "balla.png", "booka.png", "cata.png"],
   ["doga.png", "icecreaman.png", "pena.png", "pencila.png"],
@@ -97,6 +99,28 @@ var audPart2 = [
 // console.log(txt.substring(0, txt.length - 4));
 //id.slice(8)
 //var radioValue = document.getElementById("part-0").value;
+var password = "2312";
+
+function init() {
+  if (document.getElementById("pwd").value == password) {
+    document.getElementById("container").style.display = "block";
+    document.getElementById("interface-box").style.display = "none";
+
+    //Device selection
+    if (document.getElementById("phone").checked) {
+      document.getElementById("css-device").href = `./stylePhone.css`;
+    }
+
+    if (document.getElementById("iPad").checked) {
+      document.getElementById("css-device").href = `./listen01.01.css`;
+    }
+    console.log(document.getElementById("css-device").href);
+
+    initiateListening();
+  } else {
+    alert("Та буруу паспорт оруулсан байна!!!");
+  }
+}
 
 // Энэ хэсэгт PATH замаа тодорхойлж өгөхгүй бол программ эхлэхэд зургуудаа харуулж чадахгүй!!!
 for (var x = 0; x < 3; x++) {
@@ -129,7 +153,6 @@ console.log(document.getElementById("part-0").checked);
 // var txt = "apple.png";
 // console.log(txt.substring(0, txt.length - 4));
 
-initiateListening();
 //run();
 
 function initiateListening() {
@@ -322,6 +345,33 @@ function radioPart2(value) {
   sourceImg = imgPart2;
   sourceAud = audPart2;
   initiateListening();
+  if (sourceImg.length == 1) {
+    document.getElementById("btn-prew").src = "./img/PREW0.jpg";
+    document.getElementById("btn-next").src = "./img/NEXT0.jpg";
+  }
+}
+
+function checkedPhone() {
+  document.getElementById("css-device").href = `./stylePhone.css`;
+  console.log(document.getElementById("css-device").href);
+  initiateListening0();
+}
+function checkedPad() {
+  document.getElementById("css-device").href = `./listen01.01.css`;
+  console.log(document.getElementById("css-device").href);
+  initiateListening0();
+}
+
+function initiateListening0() {
+  ind = 0;
+  clickedAud = [];
+  clickedImg = [];
+  document.getElementById("btn-prew").src = "./img/PREW0.jpg";
+  document.getElementById("btn-next").src = "./img/NEXT1.jpg";
+  for (var x = 0; x < 4; x++) {
+    document.getElementById(`img-word-${x}`).classList.remove("blurry");
+    document.getElementById(`speaker-${x}`).classList.remove("blurry");
+  }
   if (sourceImg.length == 1) {
     document.getElementById("btn-prew").src = "./img/PREW0.jpg";
     document.getElementById("btn-next").src = "./img/NEXT0.jpg";
