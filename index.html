@@ -19,7 +19,7 @@
           minlength="4"
         />
         <!-- <input type="password" id="pwd" name="pwd" minlength="8" /> -->
-        <button onclick="init()" id="login" type="button">НЭВТРЭХ</button>
+        <button onclick="init(this)" id="login" type="button">НЭВТРЭХ</button>
       </div>
       <div id="device-selection-container">
         <label for="name">Төхөөрөмжөө сонгоно уу!</label>
@@ -131,7 +131,13 @@
               value="Part2"
               id="part-1"
             />Part 2
-            <input type="radio" name="part" value="Part3" id="part-2" />Part 3
+            <input
+              onclick="radioPart3(this.value)"
+              type="radio"
+              name="part"
+              value="Part3"
+              id="part-2"
+            />Part 3
           </div>
         </div>
         <div id="bottom">

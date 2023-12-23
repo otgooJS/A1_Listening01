@@ -5,6 +5,8 @@
 // const myModule = require("./my-module.js");
 // console.log(myModule.myValue); // 42
 
+//import { imgPart1, audPart1, imgPart2, audPart2 } from "./source";
+
 //Part-ийн зурган болон аудио массивийн index-ийг нэмэгдүүлнэ
 var ind; //for NEXT inside a certain part only
 
@@ -26,7 +28,15 @@ var clickedAud, clickedImg;
 
 var cssDevice;
 
-var imgPart1 = [
+// if (document.getElementById("part-0").checked) {
+//   sourceImg = newWordImg1;
+//   sourceAud = newWordAud1;
+// }
+// console.log(txt.substring(0, txt.length - 4));
+//id.slice(8)
+//var radioValue = document.getElementById("part-0").value;
+
+const imgPart1 = [
   ["applean.png", "balla.png", "booka.png", "cata.png"],
   ["doga.png", "icecreaman.png", "pena.png", "pencila.png"],
   [
@@ -43,7 +53,7 @@ var imgPart1 = [
   ],
 ];
 
-var audPart1 = [
+const audPart1 = [
   ["applean.wav", "balla.wav", "booka.wav", "cata.wav"],
   ["doga.wav", "icecreaman.wav", "pena.wav", "pencila.wav"],
   [
@@ -60,7 +70,7 @@ var audPart1 = [
   ],
 ];
 
-var imgPart2 = [
+const imgPart2 = [
   ["myBall.png", "myBook.png", "myIcecream.png", "myPencil.png"],
   ["yourApple.png", "yourCat.png", "yourDog.png", "yourPen.png"],
   [
@@ -76,7 +86,7 @@ var imgPart2 = [
     "Is this your pencil.png",
   ],
 ];
-var audPart2 = [
+const audPart2 = [
   ["myBall.mp3", "myBook.wav", "myIcecream.mp3", "myPencil.mp3"],
   ["yourApple.mp3", "yourCat.mp3", "yourDog.mp3", "yourPen.mp3"],
   [
@@ -92,14 +102,50 @@ var audPart2 = [
     "Is this your pencil.wav",
   ],
 ];
-// if (document.getElementById("part-0").checked) {
-//   sourceImg = newWordImg1;
-//   sourceAud = newWordAud1;
-// }
-// console.log(txt.substring(0, txt.length - 4));
-//id.slice(8)
-//var radioValue = document.getElementById("part-0").value;
-var password = "2312";
+
+const imgPart3 = [
+  [
+    "This is not my apple.png",
+    "This is not my ball.png",
+    "This is not your pencil.png",
+    "This is not your dog.png",
+  ],
+  [
+    "This is not my book.png",
+    "This is not my cat.png",
+    "This is not your apple.png",
+    "This is not your ball.png",
+  ],
+  [
+    "This is not my dog.png",
+    "This is not my pencil.png",
+    "This is not your book.png",
+    "This is not your cat.png",
+  ],
+];
+const audPart3 = [
+  [
+    "This is not my apple.wav",
+    "This is not my ball.wav",
+    "This is not your pencil.wav",
+    "This is not your dog.wav",
+  ],
+  [
+    "This is not my book.wav",
+    "This is not my cat.wav",
+    "This is not your apple.wav",
+    "This is not your ball.wav",
+  ],
+  [
+    "This is not my dog.wav",
+    "This is not my pencil.wav",
+    "This is not your book.wav",
+    "This is not your cat.wav",
+  ],
+];
+
+const password = "2312";
+console.log(imgPart1);
 
 function init() {
   if (document.getElementById("pwd").value == password) {
@@ -148,7 +194,7 @@ if (document.getElementById(`part-2`).checked) {
 //console.log(source[0][2]);
 
 //document.querySelector(".parts").querySelector("#topic-part0-part1").checked = false;
-console.log(document.getElementById("part-0").checked);
+console.log(document.getElementById("part-2").checked);
 
 // var txt = "apple.png";
 // console.log(txt.substring(0, txt.length - 4));
@@ -344,6 +390,16 @@ function radioPart2(value) {
   path = value;
   sourceImg = imgPart2;
   sourceAud = audPart2;
+  initiateListening();
+  if (sourceImg.length == 1) {
+    document.getElementById("btn-prew").src = "./img/PREW0.jpg";
+    document.getElementById("btn-next").src = "./img/NEXT0.jpg";
+  }
+}
+function radioPart3(value) {
+  path = value;
+  sourceImg = imgPart3;
+  sourceAud = audPart3;
   initiateListening();
   if (sourceImg.length == 1) {
     document.getElementById("btn-prew").src = "./img/PREW0.jpg";

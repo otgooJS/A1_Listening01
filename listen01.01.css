@@ -57,7 +57,7 @@
     width: var(--max-width);
     height: var(--max-height);
     background-color: #F3F3F3;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: block;
     flex-direction: column;
 }

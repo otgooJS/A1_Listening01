@@ -11,27 +11,28 @@
 }
 #interface-box {
     width: var(--max-width);
-    height: 50vw;
+    height: 70vw;
     background-color: aqua;
-    font-size: x-large;
+    font-size: xx-large;
     display: block;
 }
     
 #input-password {
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 6vw;
 }
 #login {
-    font-size: large;
+    font-size: x-large;
 }
 #pwd {
-    font-size: large;
-    width: 20%;
-    height: 25%;
+    font-size: x-large;
+    width: 30%;
+    height: 30%;
 }
 #device-selection-container{
     width: 100%;
@@ -51,7 +52,7 @@
     width: var(--max-width);
     height: var(--max-height);
     background-color: #F3F3F3;
-    border: 1px solid red; 
+    /* border: 1px solid red;  */
     display: none;
     flex-direction: column;
 }
