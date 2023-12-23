@@ -20,7 +20,7 @@
     
 #input-password {
     width: 100%;
-    height: 80%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -38,7 +38,7 @@
 }
 #device-selection-container{
     width: 100%;
-    height: 70%;
+    height: 45%;
     /* background-color: #BC6E07; */
     /* background-color: #CDCCCC; */
     background-color:aquamarine;
